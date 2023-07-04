@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "hwr",
+	"version": "${version}",
+	"name": "Water Resistance Potion",
+	"description": "Adds Water Resistance Potions to Minecraft.",
+	"authors": [
+		"Alliegaytor"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": ""
+	},
+	"license": "LGPL-3.0-only",
+	"icon": "assets/hwr/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"xyz.alycat.hwr.Hwr"
+		]
+	},
+	"mixins": [
+		"hwr.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.19.4",
+		"java": ">=17",
+		"fabric-api": ">=0.80.0+1.19.4"
+	},
+	"suggests": {
+		"origins": ">=1.9.0"
+	}
+}

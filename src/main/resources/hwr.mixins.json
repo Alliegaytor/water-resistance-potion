@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "xyz.alycat.hwr.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "plugin": "xyz.alycat.hwr.MixinConfigPlugin",
+  "mixins": [
+    "BrewingRecipeRegistryMixin",
+    "LivingEntityMixin",
+    "LivingEntityMixinOrigins"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+	}
+}
