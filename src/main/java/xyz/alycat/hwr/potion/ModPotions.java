@@ -13,21 +13,21 @@ import xyz.alycat.hwr.effect.ModStatusEffects;
 import xyz.alycat.hwr.mixin.BrewingRecipeRegistryMixin;
 
 public class ModPotions {
-    public static Potion WATER_RESISTANCE_POTION;
-    public static Potion LONG_WATER_RESISTANCE_POTION;
+    public static Potion WATER_RESISTANCE;
+    public static Potion LONG_WATER_RESISTANCE;
 
     public static Potion registerPotion(String name, StatusEffect effect, int duration, int amplifier) {
         return Registry.register(Registries.POTION, new Identifier(Hwr.MOD_ID, name), new Potion(new StatusEffectInstance(effect, duration, amplifier)));
     }
 
     public static void registerPotions() {
-        WATER_RESISTANCE_POTION = registerPotion("water_resistance_potion", ModStatusEffects.WATER_RESISTANCE, 3600, 0);
-        LONG_WATER_RESISTANCE_POTION = registerPotion("long_water_resistance_potion", ModStatusEffects.WATER_RESISTANCE, 9600, 0);
+        WATER_RESISTANCE = registerPotion("water_resistance_potion", ModStatusEffects.WATER_RESISTANCE, 3600, 0);
+        LONG_WATER_RESISTANCE = registerPotion("long_water_resistance_potion", ModStatusEffects.WATER_RESISTANCE, 9600, 0);
         registerPotionRecipes();
     }
 
     private static void registerPotionRecipes() {
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.AWKWARD, Items.SPONGE, ModPotions.WATER_RESISTANCE_POTION);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(ModPotions.WATER_RESISTANCE_POTION, Items.REDSTONE, ModPotions.LONG_WATER_RESISTANCE_POTION);
+        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.AWKWARD, Items.SPONGE, ModPotions.WATER_RESISTANCE);
+        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(ModPotions.WATER_RESISTANCE, Items.REDSTONE, ModPotions.LONG_WATER_RESISTANCE);
     }
 }

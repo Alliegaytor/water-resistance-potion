@@ -49,7 +49,7 @@ public class ModLootTableModifiers {
                 entry(END_CITY_CHEST_ID, 0.03f)
         );
 
-        appendPotionToLootTable(chestWeightsWaterResistance, ModPotions.WATER_RESISTANCE_POTION);
+        appendPotionToLootTable(chestWeightsWaterResistance, ModPotions.WATER_RESISTANCE);
 
         final Map<Identifier, Float> chestWeightsLongWaterResistance = Map.ofEntries(
                 entry(ANCIENT_CITY_CHEST_ID, 0.09f),
@@ -58,7 +58,7 @@ public class ModLootTableModifiers {
                 entry(END_CITY_CHEST_ID, 0.005f)
         );
 
-        appendPotionToLootTable(chestWeightsLongWaterResistance, ModPotions.LONG_WATER_RESISTANCE_POTION);
+        appendPotionToLootTable(chestWeightsLongWaterResistance, ModPotions.LONG_WATER_RESISTANCE);
     }
 }
 
