@@ -33,7 +33,7 @@ public class ModLootTableModifiers {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(rarity))
                         .with(ItemEntry.builder(Items.POTION).apply(SetPotionLootFunction.builder(potion)));
-                tableBuilder.pool(poolBuilder.build());
+                tableBuilder.pool(poolBuilder);
             }
         });
     }
