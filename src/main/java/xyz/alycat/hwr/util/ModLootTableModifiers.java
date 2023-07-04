@@ -17,7 +17,6 @@ import static java.util.Map.entry;
 
 public class ModLootTableModifiers {
     private static final Identifier IGLOO_STRUCTURE_CHEST_ID = new Identifier("minecraft", "chests/igloo_chest");
-    private static final Identifier ANCIENT_CITY_CHEST_ID = new Identifier("minecraft", "chests/ancient_city");
     private static final Identifier SHIPWRECK_TREASURE_CHEST_ID = new Identifier("minecraft", "chests/shipwreck_treasure");
     private static final Identifier BURIED_TREASURE_CHEST_ID = new Identifier("minecraft", "chests/buried_treasure");
     private static final Identifier PILLAGER_OUTPOST_CHEST_ID = new Identifier("minecraft", "chests/pillager_outpost");
@@ -40,22 +39,20 @@ public class ModLootTableModifiers {
 
     public static void modifyLootTables() {
         final Map<Identifier, Float> chestWeightsWaterResistance = Map.ofEntries(
-                entry(IGLOO_STRUCTURE_CHEST_ID, 0.005f),
-                entry(ANCIENT_CITY_CHEST_ID, 0.02f),
-                entry(SHIPWRECK_TREASURE_CHEST_ID, 0.20f),
+                entry(IGLOO_STRUCTURE_CHEST_ID, 0.008f),
+                entry(SHIPWRECK_TREASURE_CHEST_ID, 0.21f),
                 entry(BURIED_TREASURE_CHEST_ID, 0.05f),
                 entry(PILLAGER_OUTPOST_CHEST_ID, 0.02f),
-                entry(SIMPLE_DUNGEON_CHEST_ID, 0.03f),
+                entry(SIMPLE_DUNGEON_CHEST_ID, 0.04f),
                 entry(END_CITY_CHEST_ID, 0.03f)
         );
 
         appendPotionToLootTable(chestWeightsWaterResistance, ModPotions.WATER_RESISTANCE);
 
         final Map<Identifier, Float> chestWeightsLongWaterResistance = Map.ofEntries(
-                entry(ANCIENT_CITY_CHEST_ID, 0.09f),
                 entry(SHIPWRECK_TREASURE_CHEST_ID, 0.09f),
-                entry(BURIED_TREASURE_CHEST_ID, 0.023f),
-                entry(END_CITY_CHEST_ID, 0.005f)
+                entry(BURIED_TREASURE_CHEST_ID, 0.03f),
+                entry(END_CITY_CHEST_ID, 0.008f)
         );
 
         appendPotionToLootTable(chestWeightsLongWaterResistance, ModPotions.LONG_WATER_RESISTANCE);
