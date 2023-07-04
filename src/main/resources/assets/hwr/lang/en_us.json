@@ -1,12 +1,12 @@
 {
-  "item.minecraft.potion.effect.water_resistance_potion": "Water Resistance Potion",
+  "item.minecraft.potion.effect.water_resistance_potion": "Potion of Water Resistance",
   "item.minecraft.splash_potion.effect.water_resistance_potion": "Splash Potion of Water Resistance",
-  "item.minecraft.lingering_potion.effect.water_resistance_potion": "Lingering potion of Water Resistance",
+  "item.minecraft.lingering_potion.effect.water_resistance_potion": "Lingering Potion of Water Resistance",
   "item.minecraft.tipped_arrow.effect.water_resistance_potion": "Arrow of Water Resistance",
 
-  "item.minecraft.potion.effect.long_water_resistance_potion": "Water Resistance Potion",
+  "item.minecraft.potion.effect.long_water_resistance_potion": "Potion of Water Resistance",
   "item.minecraft.splash_potion.effect.long_water_resistance_potion": "Splash Potion of Water Resistance",
-  "item.minecraft.lingering_potion.effect.long_water_resistance_potion": "Lingering potion of Water Resistance",
+  "item.minecraft.lingering_potion.effect.long_water_resistance_potion": "Lingering Potion of Water Resistance",
   "item.minecraft.tipped_arrow.effect.long_water_resistance_potion": "Arrow of Water Resistance",
 
   "effect.hwr.water_resistance": "Water Resistance"
