@@ -3,6 +3,7 @@ package xyz.alycat.hwr.util;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.item.Items;
 import net.minecraft.loot.LootPool;
+import net.minecraft.loot.LootTables;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.function.SetPotionLootFunction;
@@ -11,18 +12,26 @@ import net.minecraft.potion.Potion;
 import net.minecraft.util.Identifier;
 import xyz.alycat.hwr.potion.ModPotions;
 
+import java.util.HashMap;
 import java.util.Map;
 
-import static java.util.Map.entry;
-
 public class ModLootTableModifiers {
-    private static final Identifier IGLOO_STRUCTURE_CHEST_ID = new Identifier("minecraft", "chests/igloo_chest");
-    private static final Identifier SHIPWRECK_TREASURE_CHEST_ID = new Identifier("minecraft", "chests/shipwreck_treasure");
-    private static final Identifier BURIED_TREASURE_CHEST_ID = new Identifier("minecraft", "chests/buried_treasure");
-    private static final Identifier PILLAGER_OUTPOST_CHEST_ID = new Identifier("minecraft", "chests/pillager_outpost");
-    private static final Identifier SIMPLE_DUNGEON_CHEST_ID = new Identifier("minecraft", "chests/simple_dungeon");
-    private static final Identifier END_CITY_CHEST_ID = new Identifier("minecraft", "chests/end_city_treasure");
-    private static final Identifier PIGLIN_BARTERING_GAMEPLAY_ID = new Identifier("minecraft", "gameplay/piglin_bartering");
+    private static final Map<Identifier, Float> CHEST_RARITIES_WATER_RESISTANCE = new HashMap<>();
+    private static final Map<Identifier, Float> CHEST_RARITIES_LONG_WATER_RESISTANCE = new HashMap<>();
+
+    static {
+        // Populate the chest rarities for Water Resistance potion
+        CHEST_RARITIES_WATER_RESISTANCE.put(LootTables.IGLOO_CHEST_CHEST, 0.008f);
+        CHEST_RARITIES_WATER_RESISTANCE.put(LootTables.SHIPWRECK_TREASURE_CHEST, 0.21f);
+        CHEST_RARITIES_WATER_RESISTANCE.put(LootTables.BURIED_TREASURE_CHEST, 0.05f);
+        CHEST_RARITIES_WATER_RESISTANCE.put(LootTables.SIMPLE_DUNGEON_CHEST, 0.04f);
+        CHEST_RARITIES_WATER_RESISTANCE.put(LootTables.END_CITY_TREASURE_CHEST, 0.03f);
+
+        // Populate the chest rarities for the longer Water Resistance potion
+        CHEST_RARITIES_LONG_WATER_RESISTANCE.put(LootTables.SHIPWRECK_TREASURE_CHEST, 0.09f);
+        CHEST_RARITIES_LONG_WATER_RESISTANCE.put(LootTables.BURIED_TREASURE_CHEST, 0.03f);
+        CHEST_RARITIES_LONG_WATER_RESISTANCE.put(LootTables.END_CITY_TREASURE_CHEST, 0.008f);
+    }
 
     private static void appendPotionToLootTable(Map<Identifier, Float> chestRarities, Potion potion) {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
@@ -38,24 +47,8 @@ public class ModLootTableModifiers {
     }
 
     public static void modifyLootTables() {
-        final Map<Identifier, Float> chestWeightsWaterResistance = Map.ofEntries(
-                entry(IGLOO_STRUCTURE_CHEST_ID, 0.008f),
-                entry(SHIPWRECK_TREASURE_CHEST_ID, 0.21f),
-                entry(BURIED_TREASURE_CHEST_ID, 0.05f),
-                entry(PILLAGER_OUTPOST_CHEST_ID, 0.02f),
-                entry(SIMPLE_DUNGEON_CHEST_ID, 0.04f),
-                entry(END_CITY_CHEST_ID, 0.03f)
-        );
-
-        appendPotionToLootTable(chestWeightsWaterResistance, ModPotions.WATER_RESISTANCE);
-
-        final Map<Identifier, Float> chestWeightsLongWaterResistance = Map.ofEntries(
-                entry(SHIPWRECK_TREASURE_CHEST_ID, 0.09f),
-                entry(BURIED_TREASURE_CHEST_ID, 0.03f),
-                entry(END_CITY_CHEST_ID, 0.008f)
-        );
-
-        appendPotionToLootTable(chestWeightsLongWaterResistance, ModPotions.LONG_WATER_RESISTANCE);
+        appendPotionToLootTable(CHEST_RARITIES_WATER_RESISTANCE, ModPotions.WATER_RESISTANCE);
+        appendPotionToLootTable(CHEST_RARITIES_LONG_WATER_RESISTANCE, ModPotions.LONG_WATER_RESISTANCE);
     }
 }
 

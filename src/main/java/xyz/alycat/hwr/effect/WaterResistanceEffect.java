@@ -8,9 +8,6 @@ public class WaterResistanceEffect extends StatusEffect {
         super(category, color);
     }
 
-//    public void applyUpdateEffect(LivingEntity entity, int amplifier) {
-//    }
-
     public boolean canApplyUpdateEffect(int duration, int amplifier) {
         int i;
         if (this == ModStatusEffects.WATER_RESISTANCE) {
