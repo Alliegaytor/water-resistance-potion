@@ -8,8 +8,9 @@
 		"Alliegaytor"
 	],
 	"contact": {
-		"homepage": "",
-		"sources": ""
+		"homepage": "https://github.com/Alliegaytor/water-resistance-potion",
+		"issues": "https://github.com/Alliegaytor/water-resistance-potion/issues",
+		"sources": "https://github.com/Alliegaytor/water-resistance-potion"
 	},
 	"license": "LGPL-3.0-only",
 	"icon": "assets/hwr/icon.png",
