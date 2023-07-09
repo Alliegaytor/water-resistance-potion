@@ -1,0 +1,13 @@
+{
+  "item.minecraft.potion.effect.water_resistance_potion": "Зілля водостікості",
+  "item.minecraft.splash_potion.effect.water_resistance_potion": "Вибухове зілля водостікості",
+  "item.minecraft.lingering_potion.effect.water_resistance_potion": "Осідальне зілля водостікості",
+  "item.minecraft.tipped_arrow.effect.water_resistance_potion": "Стріла водостікості",
+
+  "item.minecraft.potion.effect.long_water_resistance_potion": "Зілля водостікості",
+  "item.minecraft.splash_potion.effect.long_water_resistance_potion": "Вибухове зілля водостікості",
+  "item.minecraft.lingering_potion.effect.long_water_resistance_potion": "Осідальне зілля водостікості",
+  "item.minecraft.tipped_arrow.effect.long_water_resistance_potion": "Стріла водостікості",
+
+  "effect.hwr.water_resistance": "Водостікість"
+}
