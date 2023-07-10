@@ -1,11 +1,9 @@
 # gradle
 
 .gradle/
-gradle/
 build/
 out/
 classes/
-remappedSrc/
 
 # eclipse
 
