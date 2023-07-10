@@ -23,11 +23,12 @@ The potions are commonly found in the loot of shipwrecks, sometimes in ancient c
 
 ## Supported Minecraft Versions
 
-| Minecraft Version | Latest Mod Version | Currently Supported |
-|-------------------|--------------------|:-------------------:|
-| 1.19.3, 1.19.4    | 1.0.0+1.19.4       |          ✓          |
-| 1.19.2            | 1.0.0+1.19.2       |          ✓          |
-| 1.18.2            | 1.0.0+1.18.2       |          ✓          | 
+| Minecraft Version | Latest Mod Version                                                                    | Currently Supported |
+|-------------------|---------------------------------------------------------------------------------------|:-------------------:|
+| 1.20.0, 1.20.1    | [1.0.0+1.20.1](https://modrinth.com/mod/water-resistance-potion/version/1.0.0+1.20.1) |          ✓          |
+| 1.19.3, 1.19.4    | [1.0.0+1.19.4](https://modrinth.com/mod/water-resistance-potion/version/1.0.0+1.19.4) |          ✓          |
+| 1.19.2            | [1.0.0+1.19.2](https://modrinth.com/mod/water-resistance-potion/version/1.0.0+1.19.2) |          ✓          |
+| 1.18.2            | [1.0.0+1.18.2](https://modrinth.com/mod/water-resistance-potion/version/1.0.0+1.18.2) |          ✓          | 
 
 
 ## TODO
@@ -38,9 +39,9 @@ The potions are commonly found in the loot of shipwrecks, sometimes in ancient c
 - [ ] Error handling & debugging
 - [ ] Add potions to loot tables of some modded structures
 - [ ] Add support for popular Minecraft versions
-  - [ ] 1.20 & 1.20.1
   - [ ] 1.17.1
   - [ ] 1.16.5
+- [ ] Localisations
 
 ## Thanks <3
 Thanks to [Fallen_Breath](https://github.com/Fallen-Breath) for [conditional-mixin](https://github.com/Fallen-Breath/conditional-mixin/tree/master), allowing this mod to conditionally apply mixins.
