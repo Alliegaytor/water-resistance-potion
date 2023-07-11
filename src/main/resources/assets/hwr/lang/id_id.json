@@ -1,0 +1,13 @@
+{
+  "item.minecraft.potion.effect.water_resistance_potion": "Ramuan Tahan Air",
+  "item.minecraft.splash_potion.effect.water_resistance_potion": "Ramuan Ciprat Tahan Air",
+  "item.minecraft.lingering_potion.effect.water_resistance_potion": "Ramuan Jangkar Tahan Air",
+  "item.minecraft.tipped_arrow.effect.water_resistance_potion": "Panah Tahan Air",
+
+  "item.minecraft.potion.effect.long_water_resistance_potion": "Ramuan Tahan Air",
+  "item.minecraft.splash_potion.effect.long_water_resistance_potion": "Ramuan Jangkar Tahan Air",
+  "item.minecraft.lingering_potion.effect.long_water_resistance_potion": "Ramuan Ciprat Tahan Air",
+  "item.minecraft.tipped_arrow.effect.long_water_resistance_potion": "Panah Tahan Air",
+
+  "effect.hwr.water_resistance": "Tahan Air"
+}
