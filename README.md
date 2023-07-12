@@ -25,25 +25,28 @@ The potions are commonly found in the loot of shipwrecks, sometimes in ancient c
 
 | Minecraft Version | Latest Mod Version                                                                    | Currently Supported |
 |-------------------|---------------------------------------------------------------------------------------|:-------------------:|
-| 1.20.0, 1.20.1    | [1.0.0+1.20.1](https://modrinth.com/mod/water-resistance-potion/version/1.0.0+1.20.1) |          ✓          |
-| 1.19.3, 1.19.4    | [1.0.0+1.19.4](https://modrinth.com/mod/water-resistance-potion/version/1.0.0+1.19.4) |          ✓          |
-| 1.19.2            | [1.0.0+1.19.2](https://modrinth.com/mod/water-resistance-potion/version/1.0.0+1.19.2) |          ✓          |
-| 1.18.2            | [1.0.0+1.18.2](https://modrinth.com/mod/water-resistance-potion/version/1.0.0+1.18.2) |          ✓          | 
-
+| 1.19.3–1.20.1     | [1.0.1+1.20.1](https://modrinth.com/mod/water-resistance-potion/version/1.0.1+1.20.1) |          ✓          |
+| 1.19.2            | [1.0.1+1.19.2](https://modrinth.com/mod/water-resistance-potion/version/1.0.1+1.19.2) |          ✓          |
+| 1.18.2            | [1.0.1+1.18.2](https://modrinth.com/mod/water-resistance-potion/version/1.0.1+1.18.2) |          ✓          |
+| 1.17.0, 1.17.1    | [1.0.1+1.17.1](https://modrinth.com/mod/water-resistance-potion/version/1.0.1+1.17.1) |          ✓          |
 
 ## TODO
 - [ ] Add water resistance status effect to enchanted golden apples
-- [x] Add water resistance potions to loot table gen
 - [ ] Teach Blazes how to swim? / Decide if it's a feature that they can't swim
-- [x] Expand readme
 - [ ] Error handling & debugging
 - [ ] Add potions to loot tables of some modded structures
 - [ ] Add support for popular Minecraft versions
-  - [ ] 1.17.1
   - [ ] 1.16.5
+  - [ ] 1.12.2 (ambitious)
+  - [ ] 1.7.10 (very ambitious)
 - [ ] Localisations
+- [ ] Add potion texture, as the texture looks bad in 1.20
 
 ## Thanks <3
+### To these lovely contributors
+* [unroman](https://github.com/unroman) for Ukrainian translation
+
+### Useful projects
 Thanks to [Fallen_Breath](https://github.com/Fallen-Breath) for [conditional-mixin](https://github.com/Fallen-Breath/conditional-mixin/tree/master), allowing this mod to conditionally apply mixins.
 
 ## License
