@@ -1,15 +1,18 @@
 package xyz.alycat.hwr.util;
 
-import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
+import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
 import net.minecraft.item.Items;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTables;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
-import net.minecraft.loot.function.SetPotionLootFunction;
+import net.minecraft.loot.function.SetNbtLootFunction;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.potion.Potion;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Util;
+import net.minecraft.util.registry.Registry;
 import xyz.alycat.hwr.potion.ModPotions;
 
 import java.util.HashMap;
@@ -34,13 +37,15 @@ public class ModLootTableModifiers {
     }
 
     private static void appendPotionToLootTable(Map<Identifier, Float> chestRarities, Potion potion) {
-        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+        LootTableLoadingCallback.EVENT.register((resourceManager, lootManager, id, tableBuilder, source) -> {
             Float rarity = chestRarities.get(id);
             if (rarity != null) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(rarity))
-                        .with(ItemEntry.builder(Items.POTION).apply(SetPotionLootFunction.builder(potion)));
+                        .with(ItemEntry.builder(Items.POTION))
+                        // There has to be a better way...
+                        .apply(SetNbtLootFunction.builder(Util.make(new NbtCompound(), nbtCompound -> nbtCompound.putString("Potion", Registry.POTION.getId(potion).toString()))));
                 tableBuilder.pool(poolBuilder);
             }
         });

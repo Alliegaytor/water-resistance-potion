@@ -33,7 +33,8 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	modImplementation "com.github.apace100:origins-fabric:${origins_version}"
+	// My own fork of origins
+	modImplementation "com.github.Alliegaytor:origins-fabric:${origins_version}"
 	modImplementation "com.github.Fallen-Breath:conditional-mixin:${conditional_mixin_version}"
 
 	// suggested, to bundle it into your mod jar

@@ -24,10 +24,9 @@
 		"hwr.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.14.21",
-		"minecraft": "~1.18.2",
-		"java": ">=17",
-		"fabric-api": ">=0.76.0+1.18.2"
+		"fabricloader": ">=0.11.3",
+		"minecraft": "1.17.x",
+		"java": ">=17"
 	},
 	"suggests": {
 		"origins": "*"
