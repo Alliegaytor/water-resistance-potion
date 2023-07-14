@@ -2,12 +2,12 @@ package xyz.alycat.hwr.util;
 
 import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
 import net.minecraft.item.Items;
+import net.minecraft.loot.ConstantLootTableRange;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTables;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.function.SetNbtLootFunction;
-import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.potion.Potion;
 import net.minecraft.util.Identifier;
@@ -41,7 +41,7 @@ public class ModLootTableModifiers {
             Float rarity = chestRarities.get(id);
             if (rarity != null) {
                 LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
+                        .rolls(ConstantLootTableRange.create(1))
                         .conditionally(RandomChanceLootCondition.builder(rarity))
                         .with(ItemEntry.builder(Items.POTION))
                         // There has to be a better way...

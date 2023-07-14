@@ -1,7 +1,7 @@
 package xyz.alycat.hwr.effect;
 
 import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.entity.effect.StatusEffectCategory;
+import net.minecraft.entity.effect.StatusEffectType;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.Identifier;
 import xyz.alycat.hwr.Hwr;
@@ -11,7 +11,7 @@ public class ModStatusEffects {
 
     public static StatusEffect registerWaterResistanceEffect(String name) {
         return Registry.register(Registry.STATUS_EFFECT, new Identifier(Hwr.MOD_ID, name),
-                new WaterResistanceEffect(StatusEffectCategory.BENEFICIAL, 1582940));
+                new WaterResistanceEffect(StatusEffectType.BENEFICIAL, 1582940));
     }
     public static void registerEffects() {
         WATER_RESISTANCE = registerWaterResistanceEffect("water_resistance");

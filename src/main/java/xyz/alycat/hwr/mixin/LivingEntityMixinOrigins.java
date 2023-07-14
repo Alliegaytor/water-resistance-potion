@@ -4,6 +4,7 @@ import me.fallenbreath.conditionalmixin.api.annotation.Condition;
 import me.fallenbreath.conditionalmixin.api.annotation.Restriction;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.player.PlayerEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -27,7 +28,7 @@ public abstract class LivingEntityMixinOrigins {
 
         if (entity.hasStatusEffect(ModStatusEffects.WATER_RESISTANCE)) {
             // Reduce CPU overhead by checking if player first. Most entities are not players.
-            if (entity.isPlayer()) {
+            if (entity instanceof PlayerEntity) {
                 if (!entity.isInvulnerableTo(source)) {
                     if (source.getName().equals("hurt_by_water")) {
                         // Negate damage to entity

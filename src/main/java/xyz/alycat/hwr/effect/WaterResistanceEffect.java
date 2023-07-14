@@ -1,10 +1,10 @@
 package xyz.alycat.hwr.effect;
 
 import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.entity.effect.StatusEffectCategory;
+import net.minecraft.entity.effect.StatusEffectType;
 
 public class WaterResistanceEffect extends StatusEffect {
-    protected WaterResistanceEffect(StatusEffectCategory category, int color) {
+    protected WaterResistanceEffect(StatusEffectType category, int color) {
         super(category, color);
     }
 
