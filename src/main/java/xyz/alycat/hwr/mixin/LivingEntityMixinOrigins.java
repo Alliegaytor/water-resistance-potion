@@ -1,7 +1,7 @@
 package xyz.alycat.hwr.mixin;
 
-import me.fallenbreath.conditionalmixin.api.annotation.Condition;
-import me.fallenbreath.conditionalmixin.api.annotation.Restriction;
+import xyz.alycat.hwr.mixinplugin.Condition;
+import xyz.alycat.hwr.mixinplugin.Restriction;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
