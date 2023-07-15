@@ -35,10 +35,6 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	// My own fork of origins
 	modImplementation "com.github.Alliegaytor:origins-fabric:${origins_version}"
-	modImplementation "com.github.Fallen-Breath:conditional-mixin:${conditional_mixin_version}"
-
-	// suggested, to bundle it into your mod jar
-	include "com.github.Fallen-Breath:conditional-mixin:${conditional_mixin_version}"
 
 	// Developer Depends
 	modLocalRuntime("maven.modrinth:lazydfu:${lazy_dfu_version}")
@@ -53,7 +49,7 @@ processResources {
 }
 
 tasks.withType(JavaCompile).configureEach {
-	it.options.release = 17
+	it.options.release = 16
 }
 
 java {
@@ -62,8 +58,8 @@ java {
 	// If you remove this line, sources will not be generated.
 	withSourcesJar()
 
-	sourceCompatibility = JavaVersion.VERSION_17
-	targetCompatibility = JavaVersion.VERSION_17
+	sourceCompatibility = JavaVersion.VERSION_16
+	targetCompatibility = JavaVersion.VERSION_16
 }
 
 jar {
