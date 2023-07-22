@@ -1,6 +1,6 @@
 # Water Resistance Potion
 
-A minecraft fabric mod that adds a potion of water resistance which gives the effect "water protection"—negating water damage that isn't drowning.
+A minecraft fabric mod that adds a potion of water resistance which gives the effect "water resistance"—negating water damage that isn't drowning.
 
 In vanilla the only usecase for granting an entity water protection is to allow mobs that are hurt by water \(e.g. Endermen\) to swim in it without taking damage; however, if the [Origins](https://modrinth.com/mod/origins) mod is installed it will also protect the hydrophobic origins from water.
 
@@ -36,7 +36,7 @@ The potions are commonly found in the loot of shipwrecks, sometimes in ancient c
 Note: PRs updating other versions are more than welcome.
 
 ## TODO
-- [ ] Add water resistance status effect to enchanted golden apples
+- [x] Add water resistance status effect to enchanted golden apples
 - [ ] Teach Blazes how to swim? / Decide if it's a feature that they can't swim
 - [ ] Error handling & debugging
 - [ ] Add potions to loot tables of some modded structures
