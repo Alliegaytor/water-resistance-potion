@@ -1,6 +1,7 @@
 package xyz.alycat.hwr.mixin;
 
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
@@ -30,7 +31,9 @@ public abstract class LivingEntityMixin {
     @Inject(method = "applyFoodEffects", at = @At("TAIL"))
     private void applyFoodEffects(ItemStack stack, World world, LivingEntity targetEntity, CallbackInfo ci) {
         if (stack.getItem().toString().equals("enchanted_golden_apple")) {
-            ((LivingEntity)(Object)this).addStatusEffect(ModStatusEffectInstance.WATER_RESISTANCE_EFFECT_5MIN);
+            ((LivingEntity) (Object) this).addStatusEffect(
+                    new StatusEffectInstance(ModStatusEffectInstance.WATER_RESISTANCE_EFFECT_5MIN)
+            );
         }
     }
 }
