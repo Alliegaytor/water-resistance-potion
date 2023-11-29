@@ -18,7 +18,7 @@ repositories {
 	// for more information about repositories.
 	maven { url = "https://api.modrinth.com/maven" } // Lazydfu
 	maven { url = "https://jitpack.io" }
-	maven { url = "https://maven.shedaniel.me/"}
+	maven { url = "https://maven.shedaniel.me/" }
 	// See https://github.com/OnyxStudios/Cardinal-Components-API/commit/117a56d9476dd060dff309ba7835cae339c05c7f
 	maven {
 		name = 'Ladysnake Mods'
@@ -28,10 +28,13 @@ repositories {
 	maven {
 		name = 'Quilt'
 		url = 'https://maven.quiltmc.org/repository/release'
+		content {
+			includeGroup "org.quiltmc.parsers"
+		}
 	}
 	maven { url = "https://maven.cafeteria.dev" }
-	maven { url = "https://maven.jamieswhiteshirt.com/libs-release"	}
-	maven {	url = "https://maven.terraformersmc.com/" }
+	maven { url = "https://maven.jamieswhiteshirt.com/libs-release" }
+	maven { url = "https://maven.terraformersmc.com/" }
 }
 
 dependencies {
