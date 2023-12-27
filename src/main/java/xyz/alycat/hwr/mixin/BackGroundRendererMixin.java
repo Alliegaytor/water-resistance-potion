@@ -15,7 +15,7 @@ import xyz.alycat.hwr.effect.ModStatusEffects;
 @Mixin(BackgroundRenderer.class)
 public class BackGroundRendererMixin {
     /**
-     * Increase water visibility under water resistance effect. Scales fog start and end distance by a factor of 1.75
+     * Increase water visibility from water resistance effect. Scales fog start and end distance by a factor of 1.75
      */
     @Inject(method = "applyFog", at = @At(value = "TAIL"))
     private static void waterResistanceDecreaseWaterFog(Camera camera, BackgroundRenderer.FogType fogType, float viewDistance, boolean thickFog, float tickDelta, CallbackInfo ci) {
