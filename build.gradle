@@ -39,7 +39,7 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	//modImplementation "com.github.apace100:origins-fabric:${origins_version}"
 	// See https://github.com/apace100/origins-fabric/issues/619
-	modImplementation "com.github.eggohito:origins-fabric:${project.origins_version}"
+	//modImplementation "com.github.eggohito:origins-fabric:${project.origins_version}"
 	modImplementation "com.github.Fallen-Breath:conditional-mixin:${conditional_mixin_version}"
 
 	// suggested, to bundle it into your mod jar
