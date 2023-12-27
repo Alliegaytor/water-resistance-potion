@@ -25,8 +25,8 @@ The potions are commonly found in the loot of shipwrecks, sometimes in ancient c
 
 | Minecraft Version | Latest Mod Version                                                                        | Currently Supported |
 |-------------------|-------------------------------------------------------------------------------------------|:-------------------:|
-| 1.19.3–1.20.2     | [1.1.0+1.20.1](https://modrinth.com/mod/water-resistance-potion/version/1.1.0+1.20.1)     |          ✓          |
-| 1.19.2            | [1.1.0+1.19.2](https://modrinth.com/mod/water-resistance-potion/version/1.1.0+1.19.2)     |          ✓          |
+| 1.19.3–1.20.4     | [1.1.1](https://modrinth.com/mod/water-resistance-potion/version/1.1.1)                   |          ✓          |
+| 1.19.2            | [1.1.1+1.19.2](https://modrinth.com/mod/water-resistance-potion/version/1.1.1+1.19.2)     |          ✓          |
 | 1.18.2            | [1.0.1+1.18.2](https://modrinth.com/mod/water-resistance-potion/version/1.0.1+1.18.2)     |          X          |
 | 1.17.0, 1.17.1    | [1.0.1-1+1.17.1](https://modrinth.com/mod/water-resistance-potion/version/1.0.1-1+1.17.1) |         X\*         |
 | 1.16.0– 1.16.5    | [1.0.1+1.16.5](https://modrinth.com/mod/water-resistance-potion/version/1.0.1+1.16.5)     |         X\*         |
