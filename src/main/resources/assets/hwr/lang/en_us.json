@@ -9,5 +9,8 @@
   "item.minecraft.lingering_potion.effect.long_water_resistance_potion": "Lingering Potion of Water Resistance",
   "item.minecraft.tipped_arrow.effect.long_water_resistance_potion": "Arrow of Water Resistance",
 
-  "effect.hwr.water_resistance": "Water Resistance"
+  "effect.hwr.water_resistance": "Water Resistance",
+
+  "text.config.hwr.title": "Configuration",
+  "text.config.hwr.option.potion_recipe": "Potion of Water Resistance Recipe"
 }
