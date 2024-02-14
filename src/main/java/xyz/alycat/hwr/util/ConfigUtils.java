@@ -8,9 +8,10 @@ import xyz.alycat.hwr.Hwr;
 import io.wispforest.owo.config.Option.Key;
 
 public class ConfigUtils {
-    // Tries and return an Item from the config string using Identifier,
-    // returns default item from config key if InvalidIdentifierException
-    // or the item is air (this happens when the item does not exist)
+    /**
+     * Try and return item based on a configuration value as an Identifier string.
+     * Return the configuration's default item if the current config value does not work or is an identifier for "air".
+     */
     public static Item getItem(String strItem, Key key) {
         Identifier id;
         try {

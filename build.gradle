@@ -57,7 +57,7 @@ dependencies {
 
 	// Config
 	modImplementation "io.wispforest:owo-lib:${project.owo_version}"
-	include "io.wispforest:owo-sentinel:${project.owo_version}"
+//	include "io.wispforest:owo-sentinel:${project.owo_version}" // the "install owo" popup
 	annotationProcessor modImplementation("io.wispforest:owo-lib:${project.owo_version}")
 
 
