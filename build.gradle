@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.4-SNAPSHOT'
+	id 'fabric-loom' version '1.5-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -35,6 +35,14 @@ repositories {
 	maven { url = "https://maven.cafeteria.dev" }
 	maven { url = "https://maven.jamieswhiteshirt.com/libs-release" }
 	maven { url = "https://maven.terraformersmc.com/" }
+	maven { url = 'https://maven.wispforest.io' }
+	// fabric-carpet
+	maven {
+		url = 'https://masa.dy.fi/maven'
+		content {
+			includeGroup "carpet"
+		}
+	}
 }
 
 dependencies {
@@ -45,14 +53,23 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-//	modImplementation "com.github.apace100:origins-fabric:${origins_version}"
 	modImplementation "com.github.Fallen-Breath:conditional-mixin:${conditional_mixin_version}"
+
+	// Config
+	modImplementation "io.wispforest:owo-lib:${project.owo_version}"
+	include "io.wispforest:owo-sentinel:${project.owo_version}"
+	annotationProcessor modImplementation("io.wispforest:owo-lib:${project.owo_version}")
+
 
 	// suggested, to bundle it into your mod jar
 	include "com.github.Fallen-Breath:conditional-mixin:${conditional_mixin_version}"
 
 	// Developer Depends
 	modLocalRuntime("maven.modrinth:lazydfu:${lazy_dfu_version}")
+	modImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
+
+//	modImplementation "com.github.apace100:origins-fabric:${origins_version}"
+
 }
 
 processResources {
