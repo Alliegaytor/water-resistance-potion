@@ -28,11 +28,11 @@ The potion crafting recipe can be changed (to any item in the game) in the mods 
 | Minecraft Version | Latest Mod Version                                                                        | Currently Supported |
 |-------------------|-------------------------------------------------------------------------------------------|:-------------------:|
 | 1.20.3-1.20.4     | [1.2.0](https://modrinth.com/mod/water-resistance-potion/version/1.2.0)                   |          ✓          |
-| 1.19.3–1.20.2     | [1.1.1](https://modrinth.com/mod/water-resistance-potion/version/1.1.1)                   |          X          |
+| 1.20.0-1.20.2     | [1.2.0+1.20.1](https://modrinth.com/mod/water-resistance-potion/version/1.2.0+1.20.1)     |          X          |
+| 1.19.3–1.19.4     | [1.1.1](https://modrinth.com/mod/water-resistance-potion/version/1.1.1)                   |          X          |
 | 1.19.2            | [1.1.1+1.19.2](https://modrinth.com/mod/water-resistance-potion/version/1.1.1+1.19.2)     |          X          |
-| 1.18.2            | [1.0.1+1.18.2](https://modrinth.com/mod/water-resistance-potion/version/1.0.1+1.18.2)     |          X          |
-| 1.17.0, 1.17.1    | [1.0.1-1+1.17.1](https://modrinth.com/mod/water-resistance-potion/version/1.0.1-1+1.17.1) |          X          |
-| 1.16.0– 1.16.5    | [1.0.1+1.16.5](https://modrinth.com/mod/water-resistance-potion/version/1.0.1+1.16.5)     |          X          |
+
+Older versions for Minecraft 1.16, 1.17, and 1.18 are found on Modrinth.
 
 \* Open an [issue](https://github.com/Alliegaytor/water-resistance-potion/issues/new) on github and I'll most likely update it, but don't expect complete and timely support
 
