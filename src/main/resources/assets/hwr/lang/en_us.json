@@ -11,6 +11,10 @@
 
   "effect.hwr.water_resistance": "Water Resistance",
 
-  "text.config.hwr.title": "Configuration",
-  "text.config.hwr.option.potion_recipe": "Potion of Water Resistance Recipe"
+  "text.config.hwr.title": "Configuration - Potion of Water Resistance",
+  "text.config.hwr.option.potion_recipe": "Potion Recipe",
+  "text.config.hwr.option.potion_colour": "Potion Colour",
+  "text.config.hwr.enum.colours.purple": "purple",
+  "text.config.hwr.enum.colours.blue": "blue",
+  "text.config.hwr.enum.colours.green": "green"
 }

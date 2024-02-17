@@ -12,7 +12,7 @@ public class ModStatusEffects {
 
     public static StatusEffect registerWaterResistanceEffect(String name) {
         return Registry.register(Registries.STATUS_EFFECT, new Identifier(Hwr.MOD_ID, name),
-                new WaterResistanceEffect(StatusEffectCategory.BENEFICIAL, 5386927));
+                new WaterResistanceEffect(StatusEffectCategory.BENEFICIAL, Hwr.CONFIG.potion_colour().getColour()));
     }
     public static void registerEffects() {
         WATER_RESISTANCE = registerWaterResistanceEffect("water_resistance");

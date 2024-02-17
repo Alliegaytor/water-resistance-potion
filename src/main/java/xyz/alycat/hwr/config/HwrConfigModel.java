@@ -13,4 +13,23 @@ public class HwrConfigModel {
     @RestartRequired
     @Sync(Option.SyncMode.OVERRIDE_CLIENT)
     public String potion_recipe = "minecraft:sponge";
+
+    @RestartRequired
+    public Colours potion_colour = Colours.purple;
+
+    public enum Colours {
+        purple(5386927),
+        blue(1582940),
+        green(1112940);
+
+        private int colour;
+
+        private Colours(int colour) {
+            this.colour = colour;
+        }
+
+        public int getColour() {
+            return this.colour;
+        }
+    }
 }
