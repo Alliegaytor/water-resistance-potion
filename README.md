@@ -15,7 +15,7 @@ The potion allows this \(non-expansive\) list of entities to become immune to wa
 
 Brewing recipe:
 
-![](docs/BrewingRecipe.png)
+![](docs/potionRecipe.jpg)
 
 In a brewing stand, combine an awkward potion with a sponge. To make the potion last longer, add redstone.
 
@@ -27,9 +27,7 @@ The potion crafting recipe can be changed (to any item in the game) in the mods 
 
 | Minecraft Version | Latest Mod Version                                                                        | Currently Supported |
 |-------------------|-------------------------------------------------------------------------------------------|:-------------------:|
-| 1.20.3-1.20.4     | [1.2.0](https://modrinth.com/mod/water-resistance-potion/version/1.2.0)                   |          ✓          |
-| 1.20.0-1.20.2     | [1.2.0+1.20.1](https://modrinth.com/mod/water-resistance-potion/version/1.2.0+1.20.1)     |          X          |
-| 1.19.3–1.19.4     | [1.1.1](https://modrinth.com/mod/water-resistance-potion/version/1.1.1)                   |          X          |
+| 1.19.3-1.20.4     | [1.3.0](https://modrinth.com/mod/water-resistance-potion/version/1.3.0)                   |          ✓          |
 | 1.19.2            | [1.1.1+1.19.2](https://modrinth.com/mod/water-resistance-potion/version/1.1.1+1.19.2)     |          X          |
 
 Older versions for Minecraft 1.16, 1.17, and 1.18 are found on Modrinth.
