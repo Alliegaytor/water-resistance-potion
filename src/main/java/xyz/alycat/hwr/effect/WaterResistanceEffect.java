@@ -21,4 +21,3 @@ public class WaterResistanceEffect extends StatusEffect {
         return false;
     }
 }
-

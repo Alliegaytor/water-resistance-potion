@@ -37,5 +37,3 @@ public abstract class LivingEntityMixin {
         }
     }
 }
-
-

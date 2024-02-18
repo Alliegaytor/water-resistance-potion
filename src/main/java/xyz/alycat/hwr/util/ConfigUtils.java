@@ -1,11 +1,11 @@
 package xyz.alycat.hwr.util;
 
+import io.wispforest.owo.config.Option.Key;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.InvalidIdentifierException;
 import xyz.alycat.hwr.Hwr;
-import io.wispforest.owo.config.Option.Key;
 
 public class ConfigUtils {
     /**

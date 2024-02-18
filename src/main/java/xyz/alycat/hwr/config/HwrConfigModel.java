@@ -1,10 +1,8 @@
 package xyz.alycat.hwr.config;
 
-//import io.wispforest.owo.config.Option;
 import io.wispforest.owo.config.annotation.Config;
 import io.wispforest.owo.config.annotation.Modmenu;
 import io.wispforest.owo.config.annotation.RestartRequired;
-//import io.wispforest.owo.config.annotation.Sync;
 import xyz.alycat.hwr.Hwr;
 
 @Modmenu(modId = Hwr.MOD_ID)
@@ -25,9 +23,9 @@ public class HwrConfigModel {
         blue(1582940),
         green(1112940);
 
-        private int colour;
+        private final int colour;
 
-        private Colours(int colour) {
+        Colours(int colour) {
             this.colour = colour;
         }
 
