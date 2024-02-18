@@ -25,13 +25,13 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.14.21",
-		"minecraft": "~1.19.3",
+		"minecraft": ">=1.19.3- <1.21",
 		"java": ">=17",
 		"fabric-api": ">=0.76.1+1.19.3",
 		"owo-lib": ">=0.10.3"
 	},
 	"suggests": {
-		"origins": "1.8.1",
+		"origins": ">=1.8.1",
 		"modmenu": ">=5.1.0"
 	}
 }
