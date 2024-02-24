@@ -30,6 +30,7 @@
 		"fabric": ">=0.36.0+1.17"
 	},
 	"suggests": {
-		"origins": "*"
+		"origins": "*",
+	  	"modmenu": "*"
 	}
 }
