@@ -11,7 +11,8 @@ public class ModStatusEffects {
 
     public static StatusEffect registerWaterResistanceEffect(String name) {
         return Registry.register(Registry.STATUS_EFFECT, new Identifier(Hwr.MOD_ID, name),
-                new WaterResistanceEffect(StatusEffectCategory.BENEFICIAL, 1582940));
+                new WaterResistanceEffect(StatusEffectCategory.BENEFICIAL, 5386927));
+
     }
     public static void registerEffects() {
         WATER_RESISTANCE = registerWaterResistanceEffect("water_resistance");

@@ -20,5 +20,4 @@ public class MixinConfigPlugin extends RestrictiveMixinConfigPlugin {
     public List<String> getMixins() {
         return null;
     }
-    // ...
 }
