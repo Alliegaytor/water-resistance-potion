@@ -19,10 +19,6 @@ repositories {
 	maven { url = "https://api.modrinth.com/maven" } // Lazydfu
 	maven { url = "https://jitpack.io" }
 	maven { url = "https://maven.shedaniel.me/"}
-	maven {	url = "https://ladysnake.jfrog.io/artifactory/mods"	}
-	maven { url = "https://maven.cafeteria.dev" }
-	maven { url = "https://maven.jamieswhiteshirt.com/libs-release"	}
-	maven {	url = "https://maven.terraformersmc.com/" }
 }
 
 dependencies {
@@ -33,7 +29,6 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	modImplementation "com.github.apace100:origins-fabric:${origins_version}"
 	modImplementation "com.github.Fallen-Breath:conditional-mixin:${conditional_mixin_version}"
 
 	// suggested, to bundle it into your mod jar
