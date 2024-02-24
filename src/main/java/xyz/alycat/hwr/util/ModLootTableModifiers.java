@@ -56,4 +56,3 @@ public class ModLootTableModifiers {
         appendPotionToLootTable(CHEST_RARITIES_LONG_WATER_RESISTANCE, ModPotions.LONG_WATER_RESISTANCE);
     }
 }
-

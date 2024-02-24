@@ -1,10 +1,14 @@
 package xyz.alycat.hwr.mixinplugin;
 
 import net.fabricmc.loader.api.FabricLoader;
+import org.jetbrains.annotations.Nullable;
 import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
 import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
+import org.spongepowered.asm.service.MixinService;
+import xyz.alycat.hwr.Hwr;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Set;
 
@@ -12,7 +16,7 @@ import java.util.Set;
  * Boilerplate, yay :3
  * Why do I even need to write this?!??!
  */
-public class MixinConfigPlugin implements IMixinConfigPlugin {
+public final class MixinConfigPlugin implements IMixinConfigPlugin {
     @Override
     public void onLoad(String mixinPackage) {
     }
@@ -24,19 +28,17 @@ public class MixinConfigPlugin implements IMixinConfigPlugin {
 
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
-        try {
-            Class<?> mixinClass = Class.forName(mixinClassName);
+        Class<?> mixinClass = getClass(mixinClassName);
+        if (mixinClass != null) {
             if (mixinClass.isAnnotationPresent(Restriction.class)) {
                 Condition[] conditions = mixinClass.getAnnotation(Restriction.class).require();
                 for (Condition condition : conditions) {
                     if (!isModLoaded(condition.value())) {
-                        System.out.println("Mod '" + condition.value() + "' is not present, skipping mixin: " + mixinClassName);
+                        Hwr.LOGGER.info("Mod '" + condition.value() + "' is not present, skipping mixin: " + mixinClassName);
                         return false;
                     }
                 }
             }
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
         }
         return true;
     }
@@ -61,5 +63,18 @@ public class MixinConfigPlugin implements IMixinConfigPlugin {
     // Helper method to check if a mod is loaded
     private static boolean isModLoaded(String modId) {
         return FabricLoader.getInstance().isModLoaded(modId);
+    }
+
+    private static Class<?> getClass(String mixinClassName) {
+        // This mixin plugin BREAKS this mixin if it so much as looks at it
+        if (mixinClassName.equals("xyz.alycat.hwr.mixin.BrewingRecipeRegistryMixin")) {
+            return null;
+        }
+        try {
+            return Class.forName(mixinClassName);
+        }
+        catch (ClassNotFoundException e) {
+            return null;
+        }
     }
 }
