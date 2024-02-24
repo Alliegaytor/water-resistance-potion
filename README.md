@@ -15,21 +15,22 @@ The potion allows this \(non-expansive\) list of entities to become immune to wa
 
 Brewing recipe:
 
-![](docs/BrewingRecipe.png)
+![](docs/potionRecipe.jpg)
 
 In a brewing stand, combine an awkward potion with a sponge. To make the potion last longer, add redstone.
 
 The potions are commonly found in the loot of shipwrecks, sometimes in ancient cities, and rarely among other places.
 
+The potion crafting recipe can be changed (to any item in the game) in the mods config file and/or in its modmenu entry.
+
 ## Supported Minecraft Versions
 
 | Minecraft Version | Latest Mod Version                                                                        | Currently Supported |
 |-------------------|-------------------------------------------------------------------------------------------|:-------------------:|
-| 1.19.3–1.20.1     | [1.0.1+1.20.1](https://modrinth.com/mod/water-resistance-potion/version/1.0.1+1.20.1)     |          ✓          |
-| 1.19.2            | [1.0.1+1.19.2](https://modrinth.com/mod/water-resistance-potion/version/1.0.1+1.19.2)     |          ✓          |
-| 1.18.2            | [1.0.1+1.18.2](https://modrinth.com/mod/water-resistance-potion/version/1.0.1+1.18.2)     |          X          |
-| 1.17.0, 1.17.1    | [1.0.1-1+1.17.1](https://modrinth.com/mod/water-resistance-potion/version/1.0.1-1+1.17.1) |         X\*         |
-| 1.16.0– 1.16.5    | [1.0.1+1.16.5](https://modrinth.com/mod/water-resistance-potion/version/1.0.1+1.16.5)     |         X\*         |
+| 1.19.3-1.20.4     | [1.3.0](https://modrinth.com/mod/water-resistance-potion/version/1.3.0)                   |          ✓          |
+| 1.19.2            | [1.1.1+1.19.2](https://modrinth.com/mod/water-resistance-potion/version/1.1.1+1.19.2)     |          X          |
+
+Older versions for Minecraft 1.16, 1.17, and 1.18 are found on Modrinth.
 
 \* Open an [issue](https://github.com/Alliegaytor/water-resistance-potion/issues/new) on github and I'll most likely update it, but don't expect complete and timely support
 
@@ -52,6 +53,8 @@ Note: PRs updating other versions are more than welcome.
 
 ### Useful projects
 Thanks to [Fallen_Breath](https://github.com/Fallen-Breath) for [conditional-mixin](https://github.com/Fallen-Breath/conditional-mixin/tree/master), allowing this mod to conditionally apply mixins.
+
+[owo-lib](https://github.com/wisp-forest/owo-lib) for their nice simple config api.
 
 ## License
 This project is licensed as [LGPL-3.0-only](./LICENSE).
