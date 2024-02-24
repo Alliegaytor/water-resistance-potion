@@ -1,3 +1,13 @@
+### 1.1.2 - 2024.02.24
+
+*   Backported all changes from 1.3.0, except mod configuration, to Minecraft 1.17 and 1.18
+    *  Enchanted golden apples now give water resistance effect
+    *  Water resistance now reduces underwater fog
+    *  Changed default potion colour
+*   Fixed issue with brewing recipe not working in 1.17
+*   Rebuilt with newer build tools
+
+
 ### 1.3.0 - 2024.02.18
 
 *   Changed default potion colour
