@@ -32,7 +32,7 @@ The potion crafting recipe can be changed (to any item in the game) in the mods 
 
 Older versions for Minecraft 1.16, 1.17, and 1.18 are found on Modrinth.
 
-\* Open an [issue](https://github.com/Alliegaytor/water-resistance-potion/issues/new) on github and I'll most likely update it, but don't expect complete and timely support
+\* Open an [issue](https://github.com/Alliegaytor/water-resistance-potion/issues/new) on github or [codeberg](https://codeberg.org/Alliegaytor/water-resistance-potion) and I'll most likely update it, but don't expect complete and timely support
 
 Note: PRs updating other versions are more than welcome.
 
