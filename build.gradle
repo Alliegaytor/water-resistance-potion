@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.5-SNAPSHOT'
+	id 'fabric-loom' version '1.6-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -57,7 +57,6 @@ dependencies {
 	include "com.github.Fallen-Breath:conditional-mixin:${conditional_mixin_version}"
 
 	// Developer Depends
-	modLocalRuntime("maven.modrinth:lazydfu:${lazy_dfu_version}")
 	modImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
 
 //	modImplementation "com.github.apace100:origins-fabric:${origins_version}"
