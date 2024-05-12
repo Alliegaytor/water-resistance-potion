@@ -1,3 +1,8 @@
+### 1.4.0 - 2024.05.12
+
+*   Complete refactor for 1.20.5+
+
+
 ### 1.1.2 - 2024.02.24
 
 *   Backported all changes from 1.3.0, except mod configuration, to Minecraft 1.17 and 1.18

@@ -1,9 +1,9 @@
 package xyz.alycat.hwr.mixin;
 
+import net.minecraft.component.type.FoodComponent;
+import net.minecraft.component.type.FoodComponents;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -29,8 +29,8 @@ public abstract class LivingEntityMixin {
      * Apply WATER_RESISTANCE upon eating god apple
      */
     @Inject(method = "applyFoodEffects", at = @At("TAIL"))
-    private void applyFoodEffects(ItemStack stack, World world, LivingEntity targetEntity, CallbackInfo ci) {
-        if (stack.getItem().toString().equals("enchanted_golden_apple")) {
+    private void applyFoodEffects(FoodComponent component, CallbackInfo ci) {
+        if (component.equals(FoodComponents.ENCHANTED_GOLDEN_APPLE)) {
             ((LivingEntity) (Object) this).addStatusEffect(
                     new StatusEffectInstance(ModStatusEffectInstance.WATER_RESISTANCE_EFFECT_5MIN)
             );

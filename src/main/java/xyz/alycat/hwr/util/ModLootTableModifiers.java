@@ -3,21 +3,23 @@ package xyz.alycat.hwr.util;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.item.Items;
 import net.minecraft.loot.LootPool;
+import net.minecraft.loot.LootTable;
 import net.minecraft.loot.LootTables;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.function.SetPotionLootFunction;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.potion.Potion;
-import net.minecraft.util.Identifier;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.entry.RegistryEntry;
 import xyz.alycat.hwr.potion.ModPotions;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class ModLootTableModifiers {
-    private static final Map<Identifier, Float> CHEST_RARITIES_WATER_RESISTANCE = new HashMap<>();
-    private static final Map<Identifier, Float> CHEST_RARITIES_LONG_WATER_RESISTANCE = new HashMap<>();
+    private static final Map<RegistryKey<LootTable>, Float> CHEST_RARITIES_WATER_RESISTANCE = new HashMap<>();
+    private static final Map<RegistryKey<LootTable>, Float> CHEST_RARITIES_LONG_WATER_RESISTANCE = new HashMap<>();
 
     static {
         // Populate the chest rarities for Water Resistance potion
@@ -35,9 +37,9 @@ public class ModLootTableModifiers {
         CHEST_RARITIES_LONG_WATER_RESISTANCE.put(LootTables.END_CITY_TREASURE_CHEST, 0.005f);
     }
 
-    private static void appendPotionToLootTable(Map<Identifier, Float> chestRarities, Potion potion) {
-        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
-            Float rarity = chestRarities.get(id);
+    private static void appendPotionToLootTable(Map<RegistryKey<LootTable>, Float> chestRarities, RegistryEntry<Potion> potion) {
+        LootTableEvents.MODIFY.register((key, tableBuilder, source) -> {
+            Float rarity = chestRarities.get(key);
             if (rarity != null) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
