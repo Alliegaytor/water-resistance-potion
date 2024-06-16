@@ -1,3 +1,10 @@
+### 1.5.0 - 2024.06.16
+
+*   Refactor for Minecraft 1.21
+*   Add potion to TRIAL_CHAMBERS_SUPPLY_CHEST loot table
+*   Improve handling of recipe config items
+
+
 ### 1.4.0 - 2024.05.12
 
 *   Complete refactor for 1.20.5+

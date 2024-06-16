@@ -35,6 +35,7 @@ public class ModLootTableModifiers {
         CHEST_RARITIES_LONG_WATER_RESISTANCE.put(LootTables.SHIPWRECK_TREASURE_CHEST, 0.09f);
         CHEST_RARITIES_LONG_WATER_RESISTANCE.put(LootTables.BURIED_TREASURE_CHEST, 0.023f);
         CHEST_RARITIES_LONG_WATER_RESISTANCE.put(LootTables.END_CITY_TREASURE_CHEST, 0.005f);
+        CHEST_RARITIES_LONG_WATER_RESISTANCE.put(LootTables.TRIAL_CHAMBERS_SUPPLY_CHEST, 0.12f);
     }
 
     private static void appendPotionToLootTable(Map<RegistryKey<LootTable>, Float> chestRarities, RegistryEntry<Potion> potion) {
