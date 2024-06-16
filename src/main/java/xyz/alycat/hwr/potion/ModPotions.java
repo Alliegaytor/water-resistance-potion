@@ -21,7 +21,7 @@ public class ModPotions {
     public static Item POTION_RECIPE = ConfigUtils.getItem(Hwr.CONFIG.potion_recipe(), Hwr.CONFIG.keys.potion_recipe);
 
     public static RegistryEntry<Potion> registerPotion(String name, StatusEffectInstance statusEffectInstance) {
-        return Registry.registerReference(Registries.POTION, new Identifier(Hwr.MOD_ID, name), new Potion(statusEffectInstance));
+        return Registry.registerReference(Registries.POTION, Identifier.of(Hwr.MOD_ID, name), new Potion(statusEffectInstance));
     }
 
     public static void registerPotions() {

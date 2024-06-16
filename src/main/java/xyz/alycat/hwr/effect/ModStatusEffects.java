@@ -12,7 +12,7 @@ public class ModStatusEffects {
     public static RegistryEntry<StatusEffect> WATER_RESISTANCE;
 
     private static RegistryEntry<StatusEffect> registerStatusEffect(String name, StatusEffect effect) {
-        return Registry.registerReference(Registries.STATUS_EFFECT, new Identifier(Hwr.MOD_ID, name), effect);
+        return Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(Hwr.MOD_ID, name), effect);
     }
 
     public static void registerEffects() {
