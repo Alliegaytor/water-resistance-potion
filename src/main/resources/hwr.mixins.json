@@ -1,16 +1,17 @@
 {
-	"required": true,
-	"package": "xyz.alycat.hwr.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"plugin": "xyz.alycat.hwr.MixinConfigPlugin",
-	"mixins": [
-		"LivingEntityMixin",
-		"LivingEntityMixinOrigins"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	},
-	"client": [
-		"BackGroundRendererMixin"
-	]
+  "required": true,
+  "package": "xyz.alycat.hwr.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "plugin": "xyz.alycat.hwr.MixinConfigPlugin",
+  "mixins": [
+	"ConsumableComponentMixin",
+	"LivingEntityMixin",
+	"LivingEntityMixinOrigins"
+  ],
+  "injectors": {
+	"defaultRequire": 1
+  },
+  "client": [
+	"BackGroundRendererMixin"
+  ]
 }

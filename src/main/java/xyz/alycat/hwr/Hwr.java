@@ -29,4 +29,3 @@ public class Hwr implements ModInitializer {
 		ModLootTableModifiers.modifyLootTables();
 	}
 }
-

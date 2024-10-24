@@ -4,6 +4,7 @@ import me.fallenbreath.conditionalmixin.api.annotation.Condition;
 import me.fallenbreath.conditionalmixin.api.annotation.Restriction;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.server.world.ServerWorld;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -21,7 +22,7 @@ public abstract class LivingEntityMixinOrigins {
      * Currently, only works with the Origins hydrophobic classes
      */
     @Inject(method = "damage", at = @At(value = "HEAD", target = "Lnet/minecraft/entity/LivingEntity;isSleeping()Z", ordinal = 0), cancellable = true)
-    private void injectDamage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
+    private void injectDamage(ServerWorld world, DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
         LivingEntity entity = (LivingEntity) (Object) this;
         if (source.getName().equals("hurt_by_water") && entity.hasStatusEffect(ModStatusEffects.WATER_RESISTANCE)) {
             cir.setReturnValue(false);
