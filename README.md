@@ -27,7 +27,8 @@ The potion crafting recipe can be changed (to any item in the game) in the mods 
 
 | Minecraft Version | Latest Mod Version                                                                        | Currently Supported |
 |-------------------|-------------------------------------------------------------------------------------------|:-------------------:|
-| 1.21              | [1.5.0](https://modrinth.com/mod/water-resistance-potion/version/1.5.0)                   |          ✓          |
+| 1.21.2-1.21.3     | [1.5.0+1.21.3](https://modrinth.com/mod/water-resistance-potion/version/1.5.0+1.21.3)     |          ✓          |
+| 1.21-1.21.1       | [1.5.0](https://modrinth.com/mod/water-resistance-potion/version/1.5.0)                   |          X          |
 | 1.19.3-1.20.4     | [1.3.0](https://modrinth.com/mod/water-resistance-potion/version/1.3.0)                   |          ✓          |
 | 1.19.2            | [1.3.0+1.19.2](https://modrinth.com/mod/water-resistance-potion/version/1.3.0+1.19.2)     |          X          |
 

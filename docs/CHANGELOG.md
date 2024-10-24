@@ -1,3 +1,8 @@
+### 1.5.0+1.21.3 - 2024.10.24
+
+*   Refactor for Minecraft 1.21.3
+
+
 ### 1.5.0 - 2024.06.16
 
 *   Refactor for Minecraft 1.21
