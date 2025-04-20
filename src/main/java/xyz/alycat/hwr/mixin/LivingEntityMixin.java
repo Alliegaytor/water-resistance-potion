@@ -12,7 +12,7 @@ public abstract class LivingEntityMixin {
     /**
      * Add check for WATER_RESISTANCE effect before damaging entities hurtByWater
      */
-    @Inject(method = "tickMovement", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;isWet()Z", ordinal = 0), cancellable = true)
+    @Inject(method = "tickMovement", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;isTouchingWaterOrRain()Z", ordinal = 0), cancellable = true)
     private void modifyTickMovement(CallbackInfo info) {
         // Cast the entity to LivingEntity
         LivingEntity entity = (LivingEntity) (Object) this;
