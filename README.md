@@ -27,14 +27,17 @@ The potion crafting recipe can be changed (to any item in the game) in the mods 
 
 | Minecraft Version | Latest Mod Version                                                                        | Currently Supported |
 |-------------------|-------------------------------------------------------------------------------------------|:-------------------:|
-| 1.21.2-1.21.3     | [1.5.0+1.21.3](https://modrinth.com/mod/water-resistance-potion/version/1.5.0+1.21.3)     |          ✓          |
-| 1.21-1.21.1       | [1.5.0](https://modrinth.com/mod/water-resistance-potion/version/1.5.0)                   |          X          |
+| 1.21.5            | [1.5.0+1.21.5](https://modrinth.com/mod/water-resistance-potion/version/1.5.0+1.21.5)     |          *          |
+| 1.21.2-1.21.4     | [1.5.0+1.21.3](https://modrinth.com/mod/water-resistance-potion/version/1.5.0+1.21.3)     |          *          |
+| 1.21-1.21.1       | [1.5.0](https://modrinth.com/mod/water-resistance-potion/version/1.5.0)                   |          *          |
 | 1.19.3-1.20.4     | [1.3.0](https://modrinth.com/mod/water-resistance-potion/version/1.3.0)                   |          ✓          |
 | 1.19.2            | [1.3.0+1.19.2](https://modrinth.com/mod/water-resistance-potion/version/1.3.0+1.19.2)     |          X          |
 
+\* Support depends on which versions of Mincecraft Origins mod will target. (i.e. whichever version bracket is the highest and compatible with Origins mod)
+
 Older builds for Minecraft versions 1.16, 1.17, and 1.18 are available on Modrinth. There's also a build for 1.20.6.
 
-\* Open an [issue](https://github.com/Alliegaytor/water-resistance-potion/issues/new) on github or [codeberg](https://codeberg.org/Alliegaytor/water-resistance-potion) and I'll most likely update it, but don't expect complete and timely support
+\* Open an [issue](https://codeberg.org/Alliegaytor/water-resistance-potion/issues/new) on codeberg or [github](https://github.com/Alliegaytor/water-resistance-potion) and I'll most likely update it, but don't expect complete and timely support
 
 Note: PRs updating other versions are more than welcome.
 
