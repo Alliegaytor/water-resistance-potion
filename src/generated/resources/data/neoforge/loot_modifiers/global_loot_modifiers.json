@@ -1,0 +1,16 @@
+{
+  "entries": [
+    "hwr:chests/end_city_treasure_add_long",
+    "hwr:chests/trial_chambers/supply_add_long",
+    "hwr:chests/shipwreck_treasure_add_long",
+    "hwr:chests/buried_treasure_add_long",
+    "hwr:chests/ancient_city_add_long",
+    "hwr:chests/igloo_chest_add_short",
+    "hwr:chests/end_city_treasure_add_short",
+    "hwr:chests/shipwreck_treasure_add_short",
+    "hwr:chests/buried_treasure_add_short",
+    "hwr:chests/simple_dungeon_add_short",
+    "hwr:chests/ancient_city_add_short"
+  ],
+  "replace": false
+}

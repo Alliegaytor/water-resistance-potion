@@ -1,24 +1,30 @@
 package xyz.alycat.hwr.effect;
 
-import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.entity.effect.StatusEffectCategory;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.entry.RegistryEntry;
-import net.minecraft.util.Identifier;
+import net.minecraft.core.Holder;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredRegister;
 import xyz.alycat.hwr.Hwr;
+import xyz.alycat.hwr.config.StartupConfig;
+
 
 public class ModStatusEffects {
-	public static RegistryEntry<StatusEffect> WATER_RESISTANCE;
+	public static Holder<MobEffect> WATER_RESISTANCE;
 
-	private static RegistryEntry<StatusEffect> registerStatusEffect(String name, StatusEffect effect) {
-		return Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(Hwr.MOD_ID, name), effect);
-	}
+	public static final DeferredRegister<MobEffect> MOB_EFFECTS = DeferredRegister.create(BuiltInRegistries.MOB_EFFECT, Hwr.MODID);
 
-	public static void register() {
+	private static Holder<MobEffect> registerStatusEffect(String name, MobEffect effect) {
+		return MOB_EFFECTS.register(name, () -> effect);
+	};
+
+	public static void register(IEventBus eventBus) {
 		WATER_RESISTANCE = registerStatusEffect(
 				"water_resistance",
-				new WaterResistanceEffect(StatusEffectCategory.BENEFICIAL, Hwr.CONFIG.potion_colour().getColour())
+				new WaterResistanceEffect(MobEffectCategory.BENEFICIAL, StartupConfig.potion_colour.get().getColour())
 		);
+
+		MOB_EFFECTS.register(eventBus);
 	}
 }

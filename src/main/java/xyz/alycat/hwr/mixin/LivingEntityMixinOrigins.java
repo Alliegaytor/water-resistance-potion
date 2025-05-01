@@ -2,9 +2,9 @@ package xyz.alycat.hwr.mixin;
 
 import me.fallenbreath.conditionalmixin.api.annotation.Condition;
 import me.fallenbreath.conditionalmixin.api.annotation.Restriction;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.server.world.ServerWorld;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.LivingEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -21,10 +21,10 @@ public abstract class LivingEntityMixinOrigins {
 	 * Negates player water damage if player has WATER_RESISTANCE status effect.
 	 * Currently, only works with the Origins hydrophobic classes
 	 */
-	@Inject(method = "damage", at = @At(value = "HEAD", target = "Lnet/minecraft/entity/LivingEntity;isSleeping()Z", ordinal = 0), cancellable = true)
-	private void injectDamage(ServerWorld world, DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
+	@Inject(method = "hurtServer", at = @At(value = "HEAD", target = "Lnet/minecraft/entity/LivingEntity;isSleeping()Z", ordinal = 0), cancellable = true)
+	private void injectDamage(ServerLevel world, DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
 		LivingEntity entity = (LivingEntity) (Object) this;
-		if (source.getName().equals("hurt_by_water") && entity.hasStatusEffect(ModStatusEffects.WATER_RESISTANCE)) {
+		if (source.getMsgId().equals("hurt_by_water") && entity.hasEffect(ModStatusEffects.WATER_RESISTANCE)) {
 			cir.setReturnValue(false);
 		}
 	}

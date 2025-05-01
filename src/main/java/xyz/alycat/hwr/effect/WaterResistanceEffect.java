@@ -1,23 +1,21 @@
 package xyz.alycat.hwr.effect;
 
-import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.entity.effect.StatusEffectCategory;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.entity.LivingEntity;
 
-public class WaterResistanceEffect extends StatusEffect {
-	protected WaterResistanceEffect(StatusEffectCategory category, int color) {
+public class WaterResistanceEffect extends MobEffect {
+	public WaterResistanceEffect(MobEffectCategory category, int color) {
 		super(category, color);
 	}
 
-	public boolean canApplyUpdateEffect(int duration, int amplifier) {
-		int i;
-		if (this == ModStatusEffects.WATER_RESISTANCE) {
-			i = 50 >> amplifier;
-			if (i > 0) {
-				return duration % i == 0;
-			} else {
-				return true;
-			}
-		}
-		return false;
+	@Override
+	public boolean shouldApplyEffectTickThisTick(int tickCount, int amplifier) {
+		return tickCount % 2 == 0;
+	}
+
+	@Override
+	public void onEffectAdded(LivingEntity entity, int amplifier) {
+		super.onEffectAdded(entity, amplifier);
 	}
 }

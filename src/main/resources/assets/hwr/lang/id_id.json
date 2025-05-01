@@ -11,10 +11,6 @@
 
   "effect.hwr.water_resistance": "Tahan Air",
 
-  "text.config.hwr.title": "Konfigurasi - Ramuan Tahan Air",
-  "text.config.hwr.option.potion_recipe": "Resep Ramuan",
-  "text.config.hwr.option.potion_colour": "Warna Ramuan",
-  "text.config.hwr.enum.colours.purple": "ungu",
-  "text.config.hwr.enum.colours.blue": "biru",
-  "text.config.hwr.enum.colours.green": "hijau"
+  "hwr.configuration.potion_recipe": "Resep Ramuan",
+  "hwr.configuration.potion_colour": "Warna Ramuan"
 }
