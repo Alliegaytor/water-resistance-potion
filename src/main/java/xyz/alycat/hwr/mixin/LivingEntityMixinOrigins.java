@@ -13,19 +13,19 @@ import xyz.alycat.hwr.effect.ModStatusEffects;
 
 // Only use if client has origins
 @Restriction(
-        require = @Condition("origins")
+		require = @Condition("origins")
 )
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixinOrigins {
-    /**
-     * Negates player water damage if player has WATER_RESISTANCE status effect.
-     * Currently, only works with the Origins hydrophobic classes
-     */
-    @Inject(method = "damage", at = @At(value = "HEAD", target = "Lnet/minecraft/entity/LivingEntity;isSleeping()Z", ordinal = 0), cancellable = true)
-    private void injectDamage(ServerWorld world, DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
-        LivingEntity entity = (LivingEntity) (Object) this;
-        if (source.getName().equals("hurt_by_water") && entity.hasStatusEffect(ModStatusEffects.WATER_RESISTANCE)) {
-            cir.setReturnValue(false);
-        }
-    }
+	/**
+	 * Negates player water damage if player has WATER_RESISTANCE status effect.
+	 * Currently, only works with the Origins hydrophobic classes
+	 */
+	@Inject(method = "damage", at = @At(value = "HEAD", target = "Lnet/minecraft/entity/LivingEntity;isSleeping()Z", ordinal = 0), cancellable = true)
+	private void injectDamage(ServerWorld world, DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
+		LivingEntity entity = (LivingEntity) (Object) this;
+		if (source.getName().equals("hurt_by_water") && entity.hasStatusEffect(ModStatusEffects.WATER_RESISTANCE)) {
+			cir.setReturnValue(false);
+		}
+	}
 }

@@ -9,16 +9,16 @@ import xyz.alycat.hwr.effect.ModStatusEffects;
 
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin {
-    /**
-     * Add check for WATER_RESISTANCE effect before damaging entities hurtByWater
-     */
-    @Inject(method = "tickMovement", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;isTouchingWaterOrRain()Z", ordinal = 0), cancellable = true)
-    private void modifyTickMovement(CallbackInfo info) {
-        // Cast the entity to LivingEntity
-        LivingEntity entity = (LivingEntity) (Object) this;
+	/**
+	 * Add check for WATER_RESISTANCE effect before damaging entities hurtByWater
+	 */
+	@Inject(method = "tickMovement", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;isTouchingWaterOrRain()Z", ordinal = 0), cancellable = true)
+	private void modifyTickMovement(CallbackInfo info) {
+		// Cast the entity to LivingEntity
+		LivingEntity entity = (LivingEntity) (Object) this;
 
-        if (entity.hasStatusEffect(ModStatusEffects.WATER_RESISTANCE)) {
-            info.cancel();
-        }
-    }
+		if (entity.hasStatusEffect(ModStatusEffects.WATER_RESISTANCE)) {
+			info.cancel();
+		}
+	}
 }

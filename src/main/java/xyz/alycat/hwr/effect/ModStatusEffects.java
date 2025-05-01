@@ -9,16 +9,16 @@ import net.minecraft.util.Identifier;
 import xyz.alycat.hwr.Hwr;
 
 public class ModStatusEffects {
-    public static RegistryEntry<StatusEffect> WATER_RESISTANCE;
+	public static RegistryEntry<StatusEffect> WATER_RESISTANCE;
 
-    private static RegistryEntry<StatusEffect> registerStatusEffect(String name, StatusEffect effect) {
-        return Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(Hwr.MOD_ID, name), effect);
-    }
+	private static RegistryEntry<StatusEffect> registerStatusEffect(String name, StatusEffect effect) {
+		return Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(Hwr.MOD_ID, name), effect);
+	}
 
-    public static void registerEffects() {
-        WATER_RESISTANCE = registerStatusEffect(
-                "water_resistance",
-                new WaterResistanceEffect(StatusEffectCategory.BENEFICIAL, Hwr.CONFIG.potion_colour().getColour())
-        );
-    }
+	public static void register() {
+		WATER_RESISTANCE = registerStatusEffect(
+				"water_resistance",
+				new WaterResistanceEffect(StatusEffectCategory.BENEFICIAL, Hwr.CONFIG.potion_colour().getColour())
+		);
+	}
 }

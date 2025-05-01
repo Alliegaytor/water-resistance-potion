@@ -15,25 +15,25 @@ import xyz.alycat.hwr.effect.ModStatusEffectInstance;
 import xyz.alycat.hwr.util.ConfigUtils;
 
 public class ModPotions {
-    public static RegistryEntry<Potion> WATER_RESISTANCE;
-    public static RegistryEntry<Potion> LONG_WATER_RESISTANCE;
+	public static RegistryEntry<Potion> WATER_RESISTANCE;
+	public static RegistryEntry<Potion> LONG_WATER_RESISTANCE;
 
-    public static final Item POTION_RECIPE = ConfigUtils.getItem(Hwr.CONFIG.potion_recipe(), Hwr.CONFIG.keys.potion_recipe);
+	public static final Item POTION_RECIPE = ConfigUtils.getItem(Hwr.CONFIG.potion_recipe(), Hwr.CONFIG.keys.potion_recipe);
 
-    public static RegistryEntry<Potion> registerPotion(String name, StatusEffectInstance statusEffectInstance) {
-        return Registry.registerReference(Registries.POTION, Identifier.of(Hwr.MOD_ID, name), new Potion(name, statusEffectInstance));
-    }
+	public static RegistryEntry<Potion> registerPotion(String name, StatusEffectInstance statusEffectInstance) {
+		return Registry.registerReference(Registries.POTION, Identifier.of(Hwr.MOD_ID, name), new Potion(name, statusEffectInstance));
+	}
 
-    public static void registerPotions() {
-        WATER_RESISTANCE = registerPotion("water_resistance_potion", ModStatusEffectInstance.WATER_RESISTANCE_EFFECT);
-        LONG_WATER_RESISTANCE = registerPotion("long_water_resistance_potion", ModStatusEffectInstance.WATER_RESISTANCE_EFFECT_LONG);
-        registerPotionRecipes();
-    }
+	public static void register() {
+		WATER_RESISTANCE = registerPotion("water_resistance_potion", ModStatusEffectInstance.WATER_RESISTANCE_EFFECT);
+		LONG_WATER_RESISTANCE = registerPotion("long_water_resistance_potion", ModStatusEffectInstance.WATER_RESISTANCE_EFFECT_LONG);
+		registerPotionRecipes();
+	}
 
-    private static void registerPotionRecipes() {
-        FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
-            builder.registerPotionRecipe(Potions.AWKWARD, POTION_RECIPE, ModPotions.WATER_RESISTANCE);
-            builder.registerPotionRecipe(ModPotions.WATER_RESISTANCE, Items.REDSTONE, ModPotions.LONG_WATER_RESISTANCE);
-        });
-    }
+	private static void registerPotionRecipes() {
+		FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
+			builder.registerPotionRecipe(Potions.AWKWARD, POTION_RECIPE, ModPotions.WATER_RESISTANCE);
+			builder.registerPotionRecipe(ModPotions.WATER_RESISTANCE, Items.REDSTONE, ModPotions.LONG_WATER_RESISTANCE);
+		});
+	}
 }

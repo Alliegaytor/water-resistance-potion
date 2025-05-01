@@ -6,18 +6,18 @@ import java.util.List;
 import java.util.Set;
 
 public class MixinConfigPlugin extends RestrictiveMixinConfigPlugin {
-    @Override
-    public String getRefMapperConfig() {
-        return null;
-    }
+	@Override
+	public String getRefMapperConfig() {
+		return null;
+	}
 
-    @Override
-    public void acceptTargets(Set<String> myTargets, Set<String> otherTargets) {
+	@Override
+	public void acceptTargets(Set<String> myTargets, Set<String> otherTargets) {
 
-    }
+	}
 
-    @Override
-    public List<String> getMixins() {
-        return null;
-    }
+	@Override
+	public List<String> getMixins() {
+		return null;
+	}
 }
