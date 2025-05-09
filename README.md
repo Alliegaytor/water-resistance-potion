@@ -1,10 +1,10 @@
 # Water Resistance Potion
 
-A minecraft fabric mod that adds a potion of water resistance which gives the effect "water resistance"—negating water damage that isn't drowning.
+A minecraft fabric <sup>(and neoforge)</sup> mod that adds the potion of water resistance which confers the "water resistance" effect—negating water damage that isn't drowning.
 
-In vanilla the only usecase for granting an entity water protection is to allow mobs that are hurt by water \(e.g. Endermen\) to swim in it without taking damage; however, if the [Origins](https://modrinth.com/mod/origins) mod is installed it will also protect the hydrophobic origins from water.
+In vanilla the only usecase for granting an entity water resistance is to allow mobs that are ordinarily hurt by water (e.g. Endermen) to swim in it without taking damage; however, if the [Origins](https://modrinth.com/mod/origins) mod is installed it will also protect the hydrophobic origins from water.
 
-The potion allows this \(non-expansive\) list of entities to become immune to water damage:
+The effect allows this (non-expansive) list of entities to become immune to water damage:
 
 * Enderman
 * Blaze
@@ -21,7 +21,7 @@ In a brewing stand, combine an awkward potion with a sponge. To make the potion 
 
 The potions are commonly found in the loot of shipwrecks, sometimes in ancient cities, and rarely among other places.
 
-The potion crafting recipe can be changed (to any item in the game) in the mods config file and/or in its modmenu entry.
+The potion brewing recipe can be changed (to any item in the game) in the mods config file and/or in its modmenu entry. The colour of the potion is also changeable.
 
 ## Supported Minecraft Versions
 
