@@ -1,3 +1,8 @@
+### 1.5.0+1.21.7 - 2025.07.06
+
+*   Update rendering code for Minecraft 1.21.7
+
+
 ### 1.5.0+1.21.5 - 2025.04.20
 
 *   Refactor for Minecraft 1.21.5
